@@ -7,7 +7,6 @@ def factorial(n):
 
 # Python functions are first-class objects. For example, you can assign them to
 # variables:
-
 f = factorial
 print(f(5)) # 120
 

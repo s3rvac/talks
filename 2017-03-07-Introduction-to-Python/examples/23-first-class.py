@@ -3,7 +3,6 @@ class Point:
 
 # Python classes are first-class objects. For example, you can assign them to
 # variables:
-
 P = Point
 print(P()) # <__main__.Point object at 0x7fc1f458c400>
 
