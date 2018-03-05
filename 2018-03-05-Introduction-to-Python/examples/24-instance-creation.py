@@ -1,3 +1,5 @@
+# For a full version of that also covers metaclasses, see 24-instance-creation-meta.py
+
 class A:
     def __new__(cls, x):
         print('A.__new__()')
@@ -7,6 +9,11 @@ class A:
         print('A.__init__()')
         self.x = x
 
-a = A(1) # Prints A.__new__() and A.__init__().
+# The following instantiation prints:
+#
+#     A.__new__()
+#     A.__init__()
+#
+a = A(1)
 
 print(a.x) # 1
