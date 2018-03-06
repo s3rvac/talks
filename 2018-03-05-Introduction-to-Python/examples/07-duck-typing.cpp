@@ -2,7 +2,7 @@
 //
 // Based on https://en.wikipedia.org/wiki/Duck_typing#In_C.2B.2B
 //
-// $ g++ 07-duck-typing.cpp -o 06-duck-typing
+// $ g++ 07-duck-typing.cpp -o 07-duck-typing
 // $ ./07-duck-typing
 
 #include <iostream>
