@@ -8,7 +8,7 @@ def foo2():
     print(x)
 
 x = 2
-foo2() # 1
+foo2() # 2
 
 def bar():
     x = 3
