@@ -10,4 +10,8 @@ def factorial(n):
     else:
         return n * factorial(n - 1)
 
-print(factorial.__doc__)
+print(factorial.__doc__) # prints "Returns the factorial of n."
+
+# ...and even three dots :-)
+x = ...
+print(x) # prints "Ellipsis"
