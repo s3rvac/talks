@@ -1,0 +1,12 @@
+# If this were a hypothetical dynamically scoped language:
+
+int x = 1;
+
+fun foo() {
+	print(x);
+}
+
+fun bar() {
+	int x = 2;
+	foo();       # This would print 2 in a dynamically scoped language.
+}
