@@ -13,4 +13,4 @@ class Point:
 
 a = Point(1, 2)
 b = Point(3, 4)
-print(a.distance(b))  # 2.8284271247461903
+print(a.distance(b)) # 2.8284271247461903
