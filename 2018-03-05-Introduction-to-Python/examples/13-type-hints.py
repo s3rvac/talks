@@ -1,7 +1,9 @@
 # The presence of type hints has no effect on runtime whatsoever. It is used by
 # source analyzers (e.g. http://mypy-lang.org/).
+#
+# Requires Python >= 3.5.
 def hello(name: str) -> str:
-    return f'Hello {name}'
+    return 'Hello ' + name
 
 hello('Joe') # Hello Joe
 hello(5)     # Hello 5
