@@ -6,6 +6,10 @@ Supportive material for my *Introduction to Python* talk from 2017-03-07.
 * [Slides](https://github.com/s3rvac/talks/raw/master/2017-03-07-Introduction-to-Python/slides.pdf)
 * [Examples](https://github.com/s3rvac/talks/tree/master/2017-03-07-Introduction-to-Python/examples)
 
+**Note:** A newer version of this talk is
+[here](https://github.com/s3rvac/talks/tree/master/2018-03-05-Introduction-to-Python)
+(from 2018-03-05).
+
 Recordings (in Czech)
 ---------------------
 
