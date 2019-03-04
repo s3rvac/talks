@@ -1,21 +1,27 @@
-def foo(n):
-    return n + 1
+def factorial(n):
+    """Returns the factorial of n."""
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
 
-print(foo(1)) # 2
+# Python functions are first-class objects. For example, you can assign them to
+# variables:
+f = factorial
+print(f(5)) # 120
 
-# Assigning functions to variables:
-bar = foo
-print(bar(1)) # 2
+# Pass them to other functions:
+def execute(f, x):
+    return f(x)
 
-# Passing functions as an argument:
-def execute(func, arg):
-    return func(arg)
-print(execute(foo, 1)) # 2
+x = execute(factorial, 5)
+print(x) # 120
 
-# Creating functions during runtime:
-def adder(n):
-    def f(k):
-        return k + n
-    return f
-g = adder(1)
-print(g(5)) # 6
+# Create them during runtime and return them:
+def create(i):
+    def add(n):
+        return n + i
+    return add
+
+adder = create(1)
+print(adder(5)) # 6
