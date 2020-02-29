@@ -1,0 +1,10 @@
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+for fib in fibonacci():
+    print(fib)
+    if fib > 100:
+        break
