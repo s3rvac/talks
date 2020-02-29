@@ -37,6 +37,8 @@ print(id(list1)) # 140045417168968
 list1 = list1 + list2
 print(id(list1)) # 140654991417864 (oops)
 
+# For an example of the "walrus operator" :=, see 30-walrus-operator.py.
+
 # in:
 print(3 in [1, 2, 3, 4]) # True
 
