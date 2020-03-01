@@ -11,6 +11,6 @@ fn main() {
     // The following line results in a compilation error (types are checked
     // during compilation because Rust is statically typed):
     //
-    // error: mismatched types (expected &str, found integral variable)
+    // error: mismatched types (expected &str, found integer)
     println!("{}", x + 2);
 }
