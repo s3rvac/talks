@@ -3,15 +3,15 @@
 class Meta(type):
     def __new__(meta, name, bases, dict):
         print('Meta.__new__()')
-        return type.__new__(meta, name, bases, dict)
+        return super().__new__(meta, name, bases, dict)
 
-    def __init__(cls, name, bases, dict):
+    def __init__(self, name, bases, dict):
         print('Meta.__init__()')
-        return type.__init__(cls, name, bases, dict)
+        return super().__init__(name, bases, dict)
 
-    def __call__(cls, n):
+    def __call__(self, n):
         print('Meta.__call__()')
-        return type.__call__(cls, n)
+        return super().__call__(n)
 
 # The following creation of A prints:
 #
@@ -19,13 +19,13 @@ class Meta(type):
 #   Meta.__init__()
 #
 class A(metaclass=Meta):
-    def __new__(cls, x):
+    def __new__(cls, n):
         print('A.__new__()')
-        return object.__new__(cls)
+        return super().__new__(cls)
 
-    def __init__(self, x):
+    def __init__(self, n):
         print('A.__init__()')
-        self.x = x
+        self.n = n
 
 print()
 
