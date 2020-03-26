@@ -12,11 +12,11 @@ print(x) # Ellipsis
 
 # Also function descriptions:
 def factorial(n):
-	"""Returns the factorial of n."""
-	if n == 0:
-		return 1
-	else:
-		return n * factorial(n - 1)
+    """Returns the factorial of n."""
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
 
 print(factorial.__doc__) # "Returns the factorial of n."
 

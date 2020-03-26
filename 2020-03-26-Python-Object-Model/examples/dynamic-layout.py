@@ -19,15 +19,15 @@ print(x.foo()) # 10
 # I do not recommend doing this in practice):
 
 class A:
-	def foo(self):
-		return 1
+    def foo(self):
+        return 1
 
 class B(A):
-	pass
+    pass
 
 class C:
-	def foo(self):
-		return 2
+    def foo(self):
+        return 2
 
 b = B()
 print(b.foo(), B.__bases__) # 1 (<class '__main__.A'>,)
