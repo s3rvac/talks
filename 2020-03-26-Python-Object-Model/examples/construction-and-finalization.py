@@ -18,7 +18,14 @@ class A:
 #
 #     A.__new__()
 #     A.__init__()
-#     A.__del__()
 #
 a = A(1)
+
+# The following piece of code MAY print:
+#
+#     A.__del__()
+#
+# It depends on the interpreter. For example, in CPython, which uses reference
+# counting, it will print the string. However, in PyPy, which uses a
+# full-fledged garbage collector, it will not print that.
 del a
