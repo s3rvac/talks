@@ -1,4 +1,4 @@
-# An example of using __init_subclass__. Useful for e.g. pluing systems.
+# An example of using __init_subclass__. Useful for e.g. plugin systems.
 
 class Plugin:
     registered_plugins = []
