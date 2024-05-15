@@ -10,9 +10,9 @@ class Meta(type):
         print('Meta.__init__()')
         return super().__init__(name, bases, attrs)
 
-    def __call__(self, n):
+    def __call__(self, *args, **kwargs):
         print('Meta.__call__()')
-        return super().__call__(n)
+        return super().__call__(*args, **kwargs)
 
 # The following creation of A prints:
 #
