@@ -11,14 +11,8 @@ class Method:
 
     def __get__(self, instance, owner=None):
         if instance is None:
-            return self
+            return self.func
         return types.MethodType(self.func, instance)
-
-    def __call__(self, *args, **kwargs):
-        return self.func(*args, **kwargs)
-
-    def __repr__(self):
-        return repr(self.func)
 
 def foo(self):
     return 42
