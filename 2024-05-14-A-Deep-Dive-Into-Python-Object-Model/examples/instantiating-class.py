@@ -2,13 +2,13 @@
 # metaclass).
 
 class Meta(type):
-    def __new__(cls, name, bases, dict):
+    def __new__(cls, name, bases, attrs):
         print('Meta.__new__()')
-        return super().__new__(cls, name, bases, dict)
+        return super().__new__(cls, name, bases, attrs)
 
-    def __init__(self, name, bases, dict):
+    def __init__(self, name, bases, attrs):
         print('Meta.__init__()')
-        return super().__init__(name, bases, dict)
+        return super().__init__(name, bases, attrs)
 
     def __call__(self, n):
         print('Meta.__call__()')
