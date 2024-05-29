@@ -4,7 +4,9 @@ Here are the examples accompanying my talk. **For illustration purposes only!**
 
 ## Installation
 
-Download server:
+Note: The following instructions are for Ubuntu 22.04. If you use a different OS, please [download](https://www.mongodb.com/try/download/community) the appropriate binaries instead.
+
+Download the `mongod` server:
 ```bash
 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu2204-7.0.11.tgz
 tar xf mongodb-linux-x86_64-ubuntu2204-7.0.11.tgz
@@ -20,7 +22,7 @@ tar xf data.tar.xz
 cd ..
 ```
 
-Download `mongoimport` for importing a dataset:
+Download the `mongoimport` tool for importing a dataset:
 ```bash
 wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-ubuntu2204-x86_64-100.9.4.tgz
 tar xf mongodb-database-tools-ubuntu2204-x86_64-100.9.4.tgz
@@ -52,12 +54,13 @@ Basics:
 ```javascript
 use test
 db.people.insertOne({name: "John Doe", age: 32})
-db.people.findOne({_id: ObjectId("[..]")})
+db.people.insertOne({name: "Jane Doe", age: 24})
 db.people.find()
+db.people.findOne({_id: ObjectId("[..]")}) // Use the ObjectID from either of the insertOne commands
 db.people.find({}, {_id: 0, name: 1}) // Projection
 db.people.updateOne({_id: ObjectId("[..]")}, {$set: {age: 33}})
 db.people.updateOne({_id: ObjectId("[..]")}, {$inc: {age: 1}})
-db.people.deleteOne({_id: ObjectId("6652f511eabebd044ba26a13")})
+db.people.deleteOne({_id: ObjectId("[..]")})
 ```
 
 Getting the time when a record was inserted:
