@@ -1,6 +1,9 @@
 # Introduction to MongoDB
 
-Here are the examples accompanying my talk. **For illustration purposes only!**
+Supportive material for my *Introduction to MongoDB* talk at Gen™ from 2024-05-30.
+
+* [Slides](https://github.com/s3rvac/talks/raw/master/2024-05-30-Introduction-to-MongoDB/slides.pdf)
+* Examples: See below.
 
 ## Installation
 
@@ -54,9 +57,9 @@ Basics:
 ```javascript
 use test
 db.people.insertOne({name: "John Doe", age: 32})
-db.people.insertOne({name: "Jane Doe", age: 24})
+db.people.insertOne({name: "Jane Doe", favoriteColors: ["green", "yellow"]})
 db.people.find()
-db.people.findOne({_id: ObjectId("[..]")}) // Use the ObjectID from either of the insertOne commands
+db.people.findOne({_id: ObjectId("[..]")}) // Use the ObjectID from the first record
 db.people.find({}, {_id: 0, name: 1}) // Projection
 db.people.updateOne({_id: ObjectId("[..]")}, {$set: {age: 33}})
 db.people.updateOne({_id: ObjectId("[..]")}, {$inc: {age: 1}})
@@ -83,12 +86,12 @@ db.sales.find({"items.name": "laptop"})
 Getting the total price for all sold laptops:
 ```javascript
 db.sales.aggregate([
-	// Create a single document for each item (recall that `items` is an array).
-	{$unwind: "$items"},
-	// Keep only laptops.
-	{$match: {"items.name": "laptop"}},
-	// Obtain the total price.
-	{$group: {_id: "result", total: {$sum: {$multiply: ["$items.quantity", "$items.price"]}}}}
+    // Create a single document for each item (recall that `items` is an array).
+    {$unwind: "$items"},
+    // Keep only laptops.
+    {$match: {"items.name": "laptop"}},
+    // Obtain the total price.
+    {$group: {_id: "result", total: {$sum: {$multiply: ["$items.quantity", "$items.price"]}}}}
 ])
 ```
 
