@@ -8,8 +8,8 @@
 # - https://peps.python.org/pep-0703/
 #
 # Here is an example timing on my machine:
-# - With GIL:    39 seconds
-# - Without GIL: 12 seconds
+# - With GIL:    5.7 seconds
+# - Without GIL: 1.9 seconds
 #
 
 import concurrent.futures
@@ -24,4 +24,4 @@ def fib(n: int) -> int:
 
 
 with concurrent.futures.ThreadPoolExecutor(N) as executor:
-    executor.map(fib, [36] * N)
+    executor.map(fib, [32] * N)
