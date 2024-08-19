@@ -11,7 +11,7 @@ import dataclasses
 import enum
 import random
 
-# ---- A basic example with an enum ----
+# A basic example with an enum.
 
 
 class Colors(enum.Enum):
@@ -32,7 +32,7 @@ match color:  # subject
         print("I don't know that color!")
 
 
-# ---- A more elaborate example with a point ----
+# A more elaborate example with a point.
 
 
 @dataclasses.dataclass
@@ -41,11 +41,24 @@ class Point:
     y: int
 
 
-# https://peps.python.org/pep-0636/#matching-multiple-values
-# https://peps.python.org/pep-0636/#or-patterns
-# https://peps.python.org/pep-0636/#capturing-matched-sub-patterns
-# https://peps.python.org/pep-0636/#adding-conditions-to-patterns
-# https://peps.python.org/pep-0636/#going-to-the-cloud-mappings
-# https://peps.python.org/pep-0636/#matching-builtin-classes
-# Matching objects
-    # - https://peps.python.org/pep-0635/#patterns-and-functional-style
+p = Point(10, 5)
+match p:
+    case Point(0, 0):
+        print("Origin")
+    case Point(x, y) if x == y:  # Capture pattern + a guard condition.
+        print(f"Y=X at {x}")
+    case Point(0, x) | Point(x, 0):  # Multiple patterns.
+        print(f"Point on an axis at {x}")
+
+
+# Matching a built-in type.
+
+
+d = {"name": "Petr", "age": 30}
+match d:
+    case {"name": "Petr", "age": age}:
+        print(f"The chosen one, Petr, is {age} years old.")
+    case {"name": name, "age": age} if age > 40:
+        print(f"Whoa, {name} is very old!")
+    case {"name": name, "age": age}:
+        print(f"{name} is {age} years old.")
