@@ -11,12 +11,12 @@
 
 # A generic class (`str` is the upper-bound type).
 class A[T: str]:
-    def method(self) -> T:
-        ...
+    def method(self) -> T: ...
+
 
 # A generic function.
-def foo[T](a: T, b: T) -> T:
-    ...
+def foo[T](a: T, b: T) -> T: ...
+
 
 # A non-generic type alias.
 type IntOrStr = int | str

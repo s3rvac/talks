@@ -6,12 +6,12 @@
 #
 
 # Equivalent of `x: typing.Union[int, str]`.
-def foo(x: int | str):
-    ...
+def foo(x: int | str): ...
+
 
 # Equivalent of `x: typing.Optional[int]`.
-def bar(x: int | None):
-    ...
+def bar(x: int | None): ...
+
 
 # Can be used for isinstance() and issubclass():
 isinstance(5, int | str)
