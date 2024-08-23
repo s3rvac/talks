@@ -22,4 +22,4 @@ print(f"My friends: {", ".join([
 ])}")
 
 # 4) You can now use backslashes in an f-string.
-print(f"{"\n".join(["Alice", "Bob", "Charlie"])}")
+print(f"{"\n".join(friends)}")

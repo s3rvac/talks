@@ -9,13 +9,13 @@
 # - https://docs.python.org/3/reference/executionmodel.html#annotation-scopes
 #
 
+# A generic function.
+def foo[T](a: T, b: T) -> T: ...
+
+
 # A generic class (`str` is the upper-bound type).
 class A[T: str]:
     def method(self) -> T: ...
-
-
-# A generic function.
-def foo[T](a: T, b: T) -> T: ...
 
 
 # A non-generic type alias.

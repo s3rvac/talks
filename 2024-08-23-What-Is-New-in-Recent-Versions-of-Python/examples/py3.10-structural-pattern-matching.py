@@ -54,7 +54,7 @@ match p:
 # Matching a built-in type.
 
 
-d = {"name": "Petr", "age": 30}
+d = {"name": "Petr", "age": 30, "city": "Brno"}
 match d:
     case {"name": "Petr", "age": age}:
         print(f"The chosen one, Petr, is {age} years old.")

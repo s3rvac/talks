@@ -17,6 +17,6 @@ def bar(x: int | None): ...
 isinstance(5, int | str)
 issubclass(bool, int | float)
 
-# There is no magic; it calls `type.__or__()` and returns `typing.Union`.
+# There is no magic; it calls `type.__or__()` and returns `types.UnionType`.
 print(int | str)  # "int | str"
 print(type(int | str))  # <class 'types.UnionType'>

@@ -19,7 +19,7 @@ try:
 except Exception as e:
     print(f"caught {type(e)}: {e}")  # caught <class 'ExceptionGroup'>: (2 sub-exceptions)
 
-# Handle only one of the exceptions in the group (notice the asterisk after `except`):
+# Handle specific exceptions in the group (notice the asterisk after `except`):
 try:
     f()
 except* OSError as e:
