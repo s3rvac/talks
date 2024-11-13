@@ -1,5 +1,5 @@
 #
-# An example of using a semaphore in Python.
+# An example of using a threading semaphore in Python.
 #
 
 import concurrent.futures

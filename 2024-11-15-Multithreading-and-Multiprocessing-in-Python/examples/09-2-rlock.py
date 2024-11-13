@@ -1,5 +1,5 @@
 #
-# An example of using a re-entrant/recursive lock in Python.
+# An example of using a threading re-entrant/recursive lock in Python.
 #
 # Based on https://stackoverflow.com/a/16568426/2580955.
 #

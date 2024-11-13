@@ -1,5 +1,5 @@
 #
-# An example of using a lock in Python to protect shared resources.
+# An example of using a threading lock in Python to protect shared resources.
 #
 
 import concurrent.futures

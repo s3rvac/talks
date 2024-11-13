@@ -1,5 +1,5 @@
 #
-# An example of using a condition variable in Python.
+# An example of using a threading condition variable in Python.
 #
 # Based on the example on
 # https://docs.python.org/3/library/threading.html#condition-objects.
