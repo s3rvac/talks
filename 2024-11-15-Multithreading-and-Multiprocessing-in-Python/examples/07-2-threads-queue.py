@@ -19,7 +19,7 @@ def worker(q):
         q.task_done()
 
 
-def main():
+if __name__ == "__main__":
     q = queue.Queue()
 
     # Start the worker thread in the background.
@@ -31,7 +31,3 @@ def main():
 
     # Wait until all the tasks are done.
     q.join()
-
-
-if __name__ == "__main__":
-    main()

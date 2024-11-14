@@ -1,5 +1,5 @@
 #
-# An example of iheriting from multiprocessing.Process.
+# An example of inheriting from multiprocessing.Process.
 #
 
 import multiprocessing

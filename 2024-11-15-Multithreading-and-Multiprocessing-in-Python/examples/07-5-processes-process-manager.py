@@ -9,7 +9,7 @@ def worker(results, i):
     results[f"x_{i}"] = i * 2
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Create a dictionary that can be shared between processes to store the
     # results of the workers.
     manager = multiprocessing.Manager()

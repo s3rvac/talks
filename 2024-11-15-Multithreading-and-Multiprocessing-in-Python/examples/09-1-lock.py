@@ -10,7 +10,7 @@ lock = threading.Lock()
 n = 0
 
 
-def foo(i):
+def foo(_):
     # First, compute the new value in a local variable so that we do not have
     # hold the lock for too long.
     global n

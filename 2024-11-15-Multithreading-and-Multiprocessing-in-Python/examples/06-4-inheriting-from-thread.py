@@ -1,5 +1,5 @@
 #
-# An example of iheriting from threading.Thread.
+# An example of inheriting from threading.Thread.
 #
 
 import threading
