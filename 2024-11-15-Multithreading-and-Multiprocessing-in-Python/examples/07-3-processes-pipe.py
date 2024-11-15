@@ -1,7 +1,3 @@
-#
-# An example of using a pipe to communicate between processes.
-#
-
 import multiprocessing
 
 
@@ -18,7 +14,6 @@ def second_process(conn):
 
 
 if __name__ == "__main__":
-    # duplex=True means that the pipe is bidirectional.
     conn1, conn2 = multiprocessing.Pipe(duplex=True)
 
     p1 = multiprocessing.Process(target=first_process, args=(conn1,))

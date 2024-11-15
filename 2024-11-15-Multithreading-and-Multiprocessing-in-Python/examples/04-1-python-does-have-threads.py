@@ -1,11 +1,3 @@
-#
-# A very simple example of using threads in Python.
-#
-# Illustrating that Python does have threads. If you want an additional proof,
-# do some CPU-heavy work in the foo function and watch the task manager - you
-# will see five thread running.
-#
-
 import threading
 
 

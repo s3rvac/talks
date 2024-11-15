@@ -1,7 +1,3 @@
-#
-# An example of inheriting from threading.Thread.
-#
-
 import threading
 
 
@@ -10,7 +6,6 @@ class MyThread(threading.Thread):
         super().__init__()
         self.id = id
 
-    # This method is called when the thread is started.
     def run(self):
         for i in range(10):
             print(f"thread {self.id} - {i}")

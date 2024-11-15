@@ -1,7 +1,3 @@
-#
-# An example of using a threading barrier in Python.
-#
-
 import datetime
 import random
 import threading

@@ -1,7 +1,3 @@
-#
-# An example of inheriting from multiprocessing.Process.
-#
-
 import multiprocessing
 
 
@@ -10,7 +6,6 @@ class MyProcess(multiprocessing.Process):
         super().__init__()
         self.id = id
 
-    # This method is called when the process is started.
     def run(self):
         for i in range(10):
             print(f"process {self.id} - {i}")

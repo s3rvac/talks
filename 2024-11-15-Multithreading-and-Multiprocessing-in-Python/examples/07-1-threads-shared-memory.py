@@ -1,7 +1,3 @@
-#
-# An example of communicating between threads using shared memory.
-#
-
 import threading
 import time
 
@@ -16,7 +12,6 @@ def monitor_progress():
         time.sleep(1)
 
 
-# Start the monitoring thread in the background.
 threading.Thread(target=monitor_progress, daemon=True).start()
 
 while True:

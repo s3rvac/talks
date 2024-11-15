@@ -1,9 +1,3 @@
-#
-# An example of using a threading re-entrant/recursive lock in Python.
-#
-# Based on https://stackoverflow.com/a/16568426/2580955.
-#
-
 import threading
 
 
@@ -23,7 +17,7 @@ class MyClass:
 
     def changeAandB(self):
         with self.lock:
-            self.changeA()  # A regular threading.Lock would block here.
+            self.changeA()
             self.changeB()
 
 

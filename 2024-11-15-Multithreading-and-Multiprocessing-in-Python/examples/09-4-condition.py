@@ -1,13 +1,3 @@
-#
-# An example of using a threading condition variable in Python.
-#
-# Based on the example on
-# https://docs.python.org/3/library/threading.html#condition-objects.
-#
-# This would be better done via e.g. queue.Queue, so treat the following
-# example as just an illustration.
-#
-
 import threading
 import random
 import time
