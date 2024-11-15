@@ -1,4 +1,4 @@
-import concurrent.futures
+import threading
 
 N = 12
 
@@ -9,5 +9,11 @@ def fib(n: int) -> int:
     return fib(n - 1) + fib(n - 2)
 
 
-with concurrent.futures.ThreadPoolExecutor(N) as executor:
-    executor.map(fib, [32] * N)
+threads = [
+    threading.Thread(target=fib, args=(32,))
+    for _ in range(N)
+]
+for t in threads:
+    t.start()
+for t in threads:
+    t.join()
