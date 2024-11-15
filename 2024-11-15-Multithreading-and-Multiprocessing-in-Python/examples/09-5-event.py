@@ -20,7 +20,10 @@ def task2():
     print("Task 2: done")
 
 
-threads = [threading.Thread(target=task1), threading.Thread(target=task2)]
+threads = [
+    threading.Thread(target=task1),
+    threading.Thread(target=task2)
+]
 for thread in threads:
     thread.start()
 for thread in threads:
