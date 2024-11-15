@@ -8,12 +8,9 @@ n = 0
 
 def foo(_):
     global n
-    new_n = 0
     for _ in range(100_000):
-        new_n += 1
-
-    with lock:
-        n += new_n
+        with lock:
+            n += 1
 
 
 with concurrent.futures.ThreadPoolExecutor(4) as pool:
