@@ -14,12 +14,11 @@ def worker(q):
         q.task_done()
 
 
-if __name__ == "__main__":
-    q = queue.Queue()
+q = queue.Queue()
 
-    threading.Thread(target=worker, args=(q,), daemon=True).start()
+threading.Thread(target=worker, args=(q,), daemon=True).start()
 
-    for item in range(20):
-        q.put(item)
+for item in range(20):
+    q.put(item)
 
-    q.join()
+q.join()
