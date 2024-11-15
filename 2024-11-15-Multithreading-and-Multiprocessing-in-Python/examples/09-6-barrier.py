@@ -13,7 +13,10 @@ def foo(i):
     print(f"{datetime.datetime.now()}: thread {i} passed the barrier")
 
 
-threads = [threading.Thread(target=foo, args=(i,)) for i in range(1, 6)]
+threads = [
+    threading.Thread(target=foo, args=(i,))
+    for i in range(1, 6)
+]
 for thread in threads:
     thread.start()
 for thread in threads:
